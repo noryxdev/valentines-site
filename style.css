@@ -1,0 +1,127 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:radial-gradient(circle at center,#5e0033,#000);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+canvas{
+position:fixed;
+inset:0;
+z-index:0;
+}
+
+.hidden{
+display:none;
+}
+
+.start-screen{
+position:fixed;
+inset:0;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:10;
+}
+
+#startBtn{
+padding:18px 35px;
+border:none;
+border-radius:40px;
+background:linear-gradient(45deg,#ff0066,#ff00aa);
+color:white;
+font-size:18px;
+box-shadow:0 0 40px #ff0066;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+.content{
+position:relative;
+z-index:2;
+text-align:center;
+width:90%;
+max-width:380px;
+}
+
+.name{
+font-size:22px;
+background:linear-gradient(90deg,#ff00aa,#ff0066);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:16px;
+margin-bottom:15px;
+}
+
+.typewriter{
+min-height:40px;
+margin-bottom:15px;
+font-size:15px;
+}
+
+.openBookBtn{
+padding:10px 20px;
+border:none;
+border-radius:30px;
+background:#ff0066;
+color:white;
+box-shadow:0 0 20px #ff0066;
+margin-bottom:15px;
+}
+
+.book{
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px #ff0066;
+min-height:120px;
+transition:0.5s;
+}
+
+.page{
+display:none;
+animation:fade 0.6s;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0;transform:rotateY(90deg)}
+to{opacity:1;transform:rotateY(0)}
+}
+
+.controls{
+margin-top:10px;
+}
+
+.controls button{
+border:none;
+padding:6px 16px;
+border-radius:20px;
+background:#ff0066;
+color:white;
+margin:0 10px;
+}

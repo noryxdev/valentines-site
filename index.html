@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sen Benim Mucizemsin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="start-screen" id="startScreen">
+    <button id="startBtn">Başlamak İçin Dokun</button>
+</div>
+
+<canvas id="bg"></canvas>
+
+<div class="content hidden" id="content">
+
+    <h1 class="name">
+        Abdullah Zekeriyya Talha İşci
+    </h1>
+
+    <h2 class="subtitle">
+        Sevgililer Günümüz Kutlu Olsun Aşkım ❤️
+    </h2>
+
+    <div class="typewriter" id="typeText"></div>
+
+    <button class="openBookBtn" onclick="openBook()">Kalbimi Aç</button>
+
+    <div class="book-wrapper hidden" id="bookWrapper">
+        <div class="book">
+            <div class="page active">
+                Hayatıma geldiğin gün
+                dünya biraz daha güzel oldu.
+            </div>
+
+            <div class="page">
+                Gözlerin huzur
+                Gülüşün mutluluk
+                Yanında olmak güven demek.
+            </div>
+
+            <div class="page">
+                Seni her gün daha çok seviyorum.
+                İyi ki varsın.
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="prevPage()">←</button>
+            <button onclick="nextPage()">→</button>
+        </div>
+    </div>
+
+</div>
+
+<audio id="music" src="assets/music.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
